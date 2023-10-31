@@ -1,0 +1,80 @@
+
+body {
+    margin: 0;
+    font-family: fantasy;
+}
+
+/* Nav Component Styling */
+#nav--container{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Center Component Styling */
+
+#center--container {
+    background-color: #a7b5c4b5;
+    height: 645px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#center--header {
+    display: inline-table;
+    text-align: center;
+    margin: 0px;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+.center--image {
+    max-width: 800px;
+    height: auto;
+    align-self: center;
+    width: auto;
+}
+#container--button{
+    height: 35px;
+    width: 165px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+
+/* Footer Component Styling */
+
+
+#footer--container {
+    
+   
+
+}
+
+#footer--content {
+    display: flex;
+    justify-content: center;
+    font-size: x-small;
+    color: azure;
+    font-family: cursive;
+}
+
+#footer--city{
+    margin: 10px;
+    font-size: 15px;
+}
+
+
+
+/* Color -theme styling  */
+
+.light-theme {
+    
+    background-color: #2d373f;
+}
+
+.dark-theme {
+   
+    background-color: #e8e6e6db;
+}

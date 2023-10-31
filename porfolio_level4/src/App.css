@@ -1,0 +1,66 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+/* Styling for Header component */
+.header--container{
+  background-color: #ddd1d1;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  padding: 85px;
+  font-family: sans-serif;
+  font-weight: 300;
+}
+
+#header--title {
+  font-weight: 300;
+}
+
+#header--button {
+  padding: 25px;
+  font-weight: bold;
+}
+
+/* styling for project component  */
+
+#project--title {
+  font-weight: 300;
+  font-size: 25px;
+  margin-left: -65px;
+  margin-bottom: 55px;
+  margin-top: -50px;
+
+}
+
+#project--image{
+  width: 300px;
+}
+
+.project--container {
+  margin: 95px;
+  background-color: lightgray;
+}
+
+.project--main {
+  display: flex;
+  flex-direction: column;
+  width: 329px;
+}
+
+#project--name {
+  font-weight: 500;
+  margin-bottom: -3px;
+}
+#project--description {
+  font-style: italic;
+}
+
+#project--tech {
+  font-weight: 200;
+  font-style: italic;
+  margin-top: 0px;
+  font-size: 16px;
+
+}
