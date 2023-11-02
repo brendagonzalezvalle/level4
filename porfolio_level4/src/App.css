@@ -38,15 +38,21 @@ body {
   width: 300px;
 }
 
-.project--container {
-  margin: 95px;
-  background-color: lightgray;
-}
+/* .project--container {
+    margin: 83px;
+    border-style: groove;
+    padding: 40px;
+  
+} */
 
 .project--main {
-  display: flex;
-  flex-direction: column;
-  width: 329px;
+    display: flex;
+    flex-direction: column;
+    width: 329px;
+    margin: 83px;
+    border-style: groove;
+    padding: 40px;
+    font-family: emoji;
 }
 
 #project--name {
@@ -63,4 +69,19 @@ body {
   margin-top: 0px;
   font-size: 16px;
 
+}
+
+/* Styling About Component */
+
+.aboutMe {
+    text-align: center;
+    margin-left: 80px;
+    line-height: 32px;
+    margin-right: 80px;
+}
+
+.contact--container{
+    font-family: emoji;
+    margin-top: 50px;
+    margin-left: 50px;
 }

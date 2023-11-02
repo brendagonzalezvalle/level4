@@ -2,13 +2,17 @@ import React from "react";
 
 export default function Contact(){
     return(
-        <div>
-            <h1>Get In Touch</h1>
+        <div className="contact--container">
+            <h1>Contact</h1>
             <form>
-                <input type="text" placeholder="Name"></input>
-                <input type="email" placeholder="Email"></input>
-                <input type="text" placeholder="Message"></input>
-                <button>Send Message</button>
+                <div className="contact--inputs">
+                    <input type="text" placeholder="Name"></input>
+                    <input type="email" placeholder="Email"></input>
+
+                </div>
+                <textarea placeholder="Message" className="contact--message">  </textarea>
+                <br/>
+                <button className="contact--button">Send Message</button>
             </form>
         </div>
     )

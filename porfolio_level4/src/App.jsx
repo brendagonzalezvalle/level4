@@ -15,8 +15,10 @@ function App() {
       
       <Header />
       {/* <Projects />
-      <About />
-      <Contact /> */}
+      <Projects />
+      <Projects />
+      <About /> */}
+      <Contact />
       
     </div>
   )
