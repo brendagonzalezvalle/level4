@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 85px;
-  font-family: sans-serif;
+  font-family: emoji;
   font-weight: 300;
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 #header--button {
-  padding: 25px;
+  padding: 12px;
   font-weight: bold;
 }
 

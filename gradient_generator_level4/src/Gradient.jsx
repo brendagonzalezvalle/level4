@@ -6,13 +6,13 @@ export default function Gradient(){
     const [color2, setColor2] = React.useState("#0000ff")
 
     React.useEffect(()=>{
-        const gradientStyle = `linear-gradient(to right, #${color1}, #${color2}`;
-        document.getElementById("test").style.background= gradientStyle
+        const gradientStyle = `linear-gradient(#${color1}`;
+        document.getElementById("test").style.background = gradientStyle
         
 
-    }, [color1], [color2])
+    }, [color1])
 
-    console.log(color1)
+    
 
     const [angle, setAngle]= React.useState({
         number: 0
@@ -20,6 +20,7 @@ export default function Gradient(){
 
     function handleChange(){
         console.log("its'working")
+        setColor1(pre)
         
     }
 
