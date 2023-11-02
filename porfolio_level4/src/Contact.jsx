@@ -7,10 +7,10 @@ export default function Contact(){
             <form>
                 <div className="contact--inputs">
                     <input type="text" placeholder="Name"></input>
-                    <input type="email" placeholder="Email"></input>
+                    <input type="email" placeholder="Email" id="contact--email"></input>
 
                 </div>
-                <textarea placeholder="Message" className="contact--message">  </textarea>
+                <textarea  className="contact--message">  </textarea>
                 <br/>
                 <button className="contact--button">Send Message</button>
             </form>

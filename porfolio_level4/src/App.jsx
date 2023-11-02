@@ -13,11 +13,11 @@ function App() {
       
       
       
-      <Header />
-      {/* <Projects />
+      <Header /> 
       <Projects />
       <Projects />
-      <About /> */}
+      <Projects />
+      <About />
       <Contact />
       
     </div>
