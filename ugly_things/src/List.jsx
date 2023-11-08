@@ -1,4 +1,5 @@
 import React from "react";
+import { UglyContext} from "./UglyContext";
 
 
 export default function List(){
