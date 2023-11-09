@@ -14,7 +14,7 @@ function UglyContextProvider(props){
         description: ""
 
     })
-    console.log(formData)
+    // console.log(formData.title)
 
     function handleChange(event) {
         setFormData(prevFormData => {
@@ -29,7 +29,10 @@ function UglyContextProvider(props){
     return(
         <UglyContext.Provider
         value={{
-            handleChange: handleChange
+            handleChange: handleChange,
+            formData: formData,
+           
+            
         }}>
             {props.children}
 

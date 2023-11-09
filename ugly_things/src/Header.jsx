@@ -4,9 +4,9 @@ import { UglyContext} from "./UglyContext";
 
 export default function Header(props){
 
-    const {handleChange} = useContext(UglyContext)
+    const {handleChange, formData} = useContext(UglyContext)
 
-    // console.log(handleChange)
+    console.log(formData)
     // const [formData, setFormData]= React.useState({
     //     title: "",
     //     imgUrl: "",
@@ -21,9 +21,9 @@ export default function Header(props){
         <div>
             <form>
               
-                <input onChange={handleChange} type="url" placeholder="Img URL" name="imgURL"/>
-                <input onChange={handleChange} type="text" placeholder="Title" name="title"/>
-                <input onChange={handleChange} type="text" placeholder="Description" name="description"/>
+                <input onChange={handleChange} type="url" placeholder="Img URL" name="imgUrl" value={formData.imgUrl} />
+                <input onChange={handleChange} type="text" placeholder="Title" name="title" value={formData.title}/>
+                <input onChange={handleChange} type="text" placeholder="Description" name="description" value={formData.description}/>
                 <button>Submit</button>
             </form>
         </div>
