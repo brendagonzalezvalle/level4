@@ -1,25 +1,13 @@
 import React, { useContext } from "react";
 import { UglyContext} from "./UglyContext";
+import axios from "axios";
 
 
 export default function Header(props){
 
-    const {handleChange, formData} = useContext(UglyContext)
+    const {handleChange, formData, handleSubmit} = useContext(UglyContext)
 
-    // console.log(formData)
-    // const [formData, setFormData]= React.useState({
-    //     title: "",
-    //     imgUrl: "",
-    //     description: ""
-
-    // })
-
-    function handleSubmit(event) {
-        event.preventDefault()
-        // submitToApi(formData)
-        console.log(formData)
-    }
-    
+   console.log(formData)
 
     return(
         <div>
@@ -28,7 +16,7 @@ export default function Header(props){
                 <input onChange={handleChange} type="url" placeholder="Img URL" name="imgUrl" value={formData.imgUrl} />
                 <input onChange={handleChange} type="text" placeholder="Title" name="title" value={formData.title}/>
                 <input onChange={handleChange} type="text" placeholder="Description" name="description" value={formData.description}/>
-                <button>Submit</button>
+                <button >Submit</button>
             </form>
         </div>
     )
