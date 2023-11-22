@@ -10,13 +10,17 @@ export default function Header(props){
    console.log(formData)
 
     return(
-        <div>
+        <div className="header--container">
             <form onSubmit={handleSubmit}>
               
-                <input onChange={handleChange} type="url" placeholder="Img URL" name="imgUrl" value={formData.imgUrl} />
-                <input onChange={handleChange} type="text" placeholder="Title" name="title" value={formData.title}/>
-                <input onChange={handleChange} type="text" placeholder="Description" name="description" value={formData.description}/>
-                <button >Submit</button>
+                <input className="header--inputs" onChange={handleChange} type="url" placeholder="Img URL" name="imgUrl" value={formData.imgUrl} />
+                <input className="header--inputs" onChange={handleChange} type="text" placeholder="Title" name="title" value={formData.title}/>
+                <input className="header--inputs" onChange={handleChange} type="text" placeholder="Description" name="description" value={formData.description}/>
+
+                <div className="header--button">
+                    <button >Submit</button>
+
+                </div>
             </form>
         </div>
     )

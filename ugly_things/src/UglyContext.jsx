@@ -59,6 +59,7 @@ function UglyContextProvider(props){
             handleChange: handleChange,
             formData: formData,
             handleSubmit,
+            uglyThings,
            
            
             
