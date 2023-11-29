@@ -1,13 +1,32 @@
+body{
+    margin: 0;
+    background: saddlebrown;
+}
+
+/* styling list component */
+
 .list--container{
-    background-color: aquamarine;
-    border-style: dashed;
-    margin: 10px
+    
+    border-style: inset;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
 }
 
 .list--image{
     width: 400px;
 }
 
+/* style header */
+
+.header--title{
+    text-align: center;
+    font-family: sans-serif;
+    color: coral;
+    font-size: 40px;
+}
 .header--container{
     background-color: antiquewhite;
     height: 200px;
@@ -23,4 +42,26 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+}
+
+
+/* styling list item component */
+
+
+.listItemButtons{
+    width: 100px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.listItemForm > input {
+    margin: 10px;
+    width: 500px;
+}
+
+.listItemForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

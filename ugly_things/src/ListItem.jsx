@@ -41,12 +41,12 @@ console.log(edit)
                         <h1>{thing.title}</h1>
                         <h3>{thing.description}</h3>
                         <img className="list--image" src={thing.imgUrl}/>
-                        <button onClick={() => setToggle(prev => !prev)}>Edit</button>
-                        <button onClick={() => deleteThing(thing._id)}>Delete</button>
+                        <button onClick={() => setToggle(prev => !prev)} className="listItemButtons">Edit</button>
+                        <button onClick={() => deleteThing(thing._id)} className="listItemButtons">Delete</button>
 
                     </div>
                     :
-                    <form onSubmit={handleSubmit}>
+                    <form className="listItemForm" onSubmit={handleSubmit}>
                         <input
                         value={edit.title}
                         name="title"
@@ -65,7 +65,7 @@ console.log(edit)
                         onChange={handleChange}
                         />
 
-                        <button >Save</button>
+                        <button className="listItemButtons" >Save</button>
                     </form>}
                 </div>
     )

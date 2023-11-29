@@ -12,7 +12,7 @@ export default function Header(props){
     return(
         <div className="header--container">
             <form onSubmit={handleSubmit}>
-              
+                <h1 className="header--title">Ugly Things</h1>
                 <input className="header--inputs" onChange={handleChange} type="url" placeholder="Img URL" name="imgUrl" value={formData.imgUrl} />
                 <input className="header--inputs" onChange={handleChange} type="text" placeholder="Title" name="title" value={formData.title}/>
                 <input className="header--inputs" onChange={handleChange} type="text" placeholder="Description" name="description" value={formData.description}/>
