@@ -1,28 +1,47 @@
-import React, {useContext} from "react";
+import React, {useContext, useState} from "react";
 import { UglyContext} from "./UglyContext";
+import ListItem from "./ListItem";
 
 
 export default function List(props){
 
+
+    // const [isShown, setIsShown] = useState(true)
+    // const [showEdit, setShowEdit] = useState(false)
+
+    // const [form, setForm] = React.useState({
+    //     title:
+    //     description:
+
+    // })
+
+    // Create a new handle change function
+
     const {uglyThings} = useContext(UglyContext)
     console.log(uglyThings)
 
+    const [toggle, setToggle] = useState(false)
+
     const listUglyThings = uglyThings.map(thing => {
             return (
-                <div key={thing._id} className="list--container">
-                    <h1>{thing.title}</h1>
-                    <h3>{thing.description}</h3>
-                    <img className="list--image" src={thing.imgUrl}/>
-
-                </div>
-               
-
+                <ListItem thing={thing}/>
             )
     })
+
+    // function showEditInput() {
+    //     // console.log('i work')
+    //     setShowEdit(prevState => !prevState)
+    // }
+
+    // function deleteMeme() {
+    //     return setIsShown(prevState => !prevState)
+    // }
+
     return(
         <div>
             <h1>List</h1>
             {listUglyThings}
+            
         </div>
     )
 }
