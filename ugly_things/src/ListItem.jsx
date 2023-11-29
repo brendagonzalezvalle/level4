@@ -1,13 +1,37 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { UglyContext } from "./UglyContext"
 
 export default function ListItem(props){
+
+    const{deleteThing, editThing} = useContext(UglyContext)
 
     const {thing} = props
 
     const [toggle, setToggle] = useState(false)
+
     const [edit, setEdit] = useState({
-        title: thing.title
+        title: thing.title,
+        imgUrl: thing.imgUrl,
+        description: thing.description
     })
+
+    function handleChange(event) {
+        setEdit(prevFormData => {
+            return {
+                ...prevFormData,
+                [event.target.name]: event.target.value
+            }
+        })
+    }
+
+console.log(edit)
+
+ function handleSubmit(e){
+    e.preventDefault()
+
+    editThing(thing._id, edit)
+    setToggle(prev => !prev)
+ }
 
     return(
         <div>
@@ -18,14 +42,31 @@ export default function ListItem(props){
                         <h3>{thing.description}</h3>
                         <img className="list--image" src={thing.imgUrl}/>
                         <button onClick={() => setToggle(prev => !prev)}>Edit</button>
-                        
+                        <button onClick={() => deleteThing(thing._id)}>Delete</button>
 
                     </div>
                     :
-                    <div>
-                        <input></input>
-                        <button onClick={() => setToggle(prev => !prev)}>Delete</button>
-                    </div>}
+                    <form onSubmit={handleSubmit}>
+                        <input
+                        value={edit.title}
+                        name="title"
+                        onChange={handleChange}
+                        
+                        />
+                        <input
+                        value={edit.description}
+                        name="description"
+                        onChange={handleChange}
+                        />
+
+                        <input
+                        value={edit.imgUrl}
+                        name="imgUrl"
+                        onChange={handleChange}
+                        />
+
+                        <button >Save</button>
+                    </form>}
                 </div>
     )
 }

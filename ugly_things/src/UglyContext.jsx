@@ -45,13 +45,19 @@ function UglyContextProvider(props){
         })
     }
 
-    // function addToList (){
-    //     console.log("add to list was clicked!!")
-    //     setUglyThings(prev =>  {
-    //     return [...prev, formData]
-    // })
-    // console.log(uglyThings)
-    // }
+    function deleteThing(uglyId){
+        axios.delete("https://api.vschool.io/brendaholman/thing/" + uglyId)
+        .then(res => setUglyThings(prevUglyThings => prevUglyThings.filter(thing => thing._id !== uglyId)) )
+        .catch(err => console.log(err))
+    }
+
+    function editThing(uglyId, update){
+        axios.put("https://api.vschool.io/brendaholman/thing/" + uglyId, update)
+        .then(res => setUglyThings(prevUglyThings => prevUglyThings.map(thing => thing._id !== uglyId ? thing : res.data)))
+        .catch(err => console.log(err))
+    }
+
+    
 
     return(
         <UglyContext.Provider
@@ -60,6 +66,8 @@ function UglyContextProvider(props){
             formData: formData,
             handleSubmit,
             uglyThings,
+            deleteThing,
+            editThing
            
            
             
