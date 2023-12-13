@@ -12,17 +12,21 @@ const words = ['listen', 'silent', 'dog', 'god', 'hello', 'world'];
 const target = 'enlist';
 
 function filterAnagrams(arr, target) { //function is passing through and array of words and using arr as parameter 1, & 1 word as param2
+    function sortString(str){ // the sort string function is going to split strings into an array of strings, then the sort method will return elements of an array in place & returns array, lastly joined to allow values to be compared down below
+      const split = str.split("")
+      console.log(split)
+      const sort = split.sort()
+      console.log(sort)
+      const join = sort.join("")
+      console.log(join)
+     
+      return join
+    }
 
     
-    const anagrams1 = arr.filter(function(item){ // using filter we are filtering each
-
-      if(item.length === target.length){
-        return item
-      }
-  
-  })
-  return anagrams1
-  // console.log(anagrams1) 
+    const anagrams1 = arr.filter(word=> sortString(word) === sortString(target))
+    return anagrams1
+ 
 }
 
 

@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import { UglyContext} from "./UglyContext";
 import axios from "axios";
 
+// I have imported the file that context was created in. We will use a useContext() Hook that consumes the entire context (file name that has context) 
 
 export default function Header(props){
 
-    const {handleChange, formData, handleSubmit} = useContext(UglyContext)
+    const {handleChange, formData, handleSubmit} = useContext(UglyContext) //using object destructing pull values set in context provider
 
    console.log(formData)
 
