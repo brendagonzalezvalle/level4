@@ -63,8 +63,8 @@ function UglyContextProvider(props){
     return(
         <UglyContext.Provider
         value={{
-            handleChange: handleChange,
-            formData: formData,
+            handleChange,
+            formData,
             handleSubmit,
             uglyThings,
             deleteThing,
