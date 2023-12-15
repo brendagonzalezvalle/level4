@@ -1,0 +1,17 @@
+/* Style navbar */
+body{
+    margin: 0;
+}
+.navbar-container {
+    background-color:#7c5f55;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    color: black;
+    font-size: 25px;
+    margin: 15px;
+    height: 55px;
+}
+
