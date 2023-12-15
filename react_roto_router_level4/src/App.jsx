@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './Navbar'
-import Center from './Center'
+import Home from './Home'
 import Footer from './Footer'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import About from './About'
+import Services from './Services'
+import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom"
 
 
 function App() {
@@ -11,15 +13,19 @@ function App() {
 
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Center/>}> </Route>
-        </Routes>
-      </Router>
       <h1>App</h1>
-      <Navbar />
-      <Center/>
-      <Footer/>
+    
+      <Navbar/>
+
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path='/about' element={<About/>}/>
+        <Route path='/services' element={<Services/>}/>
+
+      </Routes>
+      
+     
+      
     </div>
      
   )
