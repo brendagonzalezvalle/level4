@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import axios from "axios";
 import { ContextAPI } from "./ContextAPI";
 
-export default function Recipes(props){
+export default function RandomDogs(props){
     const {recipes} = useContext(ContextAPI)
     // console.log(recipes)
 
@@ -26,7 +26,7 @@ export default function Recipes(props){
 
     return(
         <div>
-            <h1>Recipes View</h1>
+            <h1>Random Dogs</h1>
             <img onClick={handleChange} className="image" src={picture}></img>
         </div>
     )
