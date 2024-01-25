@@ -2,11 +2,6 @@ body {
     margin: 0;
     font-family: monospace;
 }
-.image {
-    max-height: -webkit-fill-available;
-    max-width: -webkit-fill-available;
-    margin: 30px;
-}
 
 .nav--container{
     display: flex;
@@ -14,13 +9,21 @@ body {
     height: 55px;
     justify-content: right;
     padding-top: 50px;
+    font-size: 22px;
+  
 }
+
+.nav--links{
+    margin-right: 35px;
+}
+
+
 
 
 
 /* Styling fun facts view */
 .funfacts--randomizer {
-    border-color: cornflowerblue;
+    border-color: black;
     border-style: double;
     border-width: thick;
     padding: 40px;
@@ -28,6 +31,8 @@ body {
     font-weight: 100;
     line-height: 45px;
     font-size: 20px;
+    background-color: azure;
+    max-width: 600px
 }
 
 
@@ -55,4 +60,41 @@ body {
     font-weight: lighter;
     font-style: italic;
     max-width: 800px;
+}
+
+/* styling randomdogs view */
+
+.randomDogs--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+.image {
+    max-height: -webkit-fill-available;
+    max-width: -webkit-fill-available;
+    margin: 50px;
+}
+
+
+/* style home */
+
+.home--intro{
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.home--container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 100px;
+
+}
+
+.home--intro2{
+    color: darkcyan;
+    font-size: 32px;
+
 }

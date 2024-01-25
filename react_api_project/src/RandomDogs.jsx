@@ -25,9 +25,10 @@ export default function RandomDogs(props){
     }
 
     return(
-        <div>
+        <div className="randomDogs--container">
             <h1>Random Dogs</h1>
             <img onClick={handleChange} className="image" src={picture}></img>
+            <button className="funfacts--button" onClick={handleChange} > Click here to see a new image!</button>
         </div>
     )
 }
