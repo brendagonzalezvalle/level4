@@ -50,7 +50,7 @@ body {
     border-radius: 13px;
     border-style: inset;
     font-family: monospace;
-    margin-top: 30px;
+    margin: 30px;
 }
 
 .funfacts--intro{
@@ -80,9 +80,14 @@ body {
 
 /* style home */
 
-.home--intro{
-    font-weight: 500;
-    font-family: sans-serif;
+.home-intro{
+    font-size: large;
+    line-height: 60.5px;
+    font-family: inherit;
+    font-weight: lighter;
+    font-style: italic;
+    /* max-width: 800px; */
+    
 }
 
 .home--container{
@@ -97,4 +102,16 @@ body {
     color: darkcyan;
     font-size: 32px;
 
+}
+
+/* style footer */
+
+.footer--container{
+    background-color: turquoise;  
+    height: 123px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }

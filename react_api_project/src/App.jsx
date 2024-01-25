@@ -5,6 +5,7 @@ import FunFacts from './FunFacts'
 import Home from './Home'
 import Navbar from './Navbar'
 import { ContextAPIProvider } from './ContextAPI'
+import Footer from '../Footer'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/randomDogs' element={<RandomDogs/>}/>
         <Route path='/funFacts' element={<FunFacts/>}/>
       </Routes>
+      <Footer/>
 
     </ContextAPIProvider>
     </>
